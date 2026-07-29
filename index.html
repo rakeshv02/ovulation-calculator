@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ovulation Calculator — Free Online | Tabutility</title>
+  <meta name="description" content="Find your fertile window and predicted ovulation date. Enter your last period date and cycle length.">
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://ovulation-calculator.tabutility.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ovulation-calculator.tabutility.com/">
+  <meta property="og:title" content="Ovulation Calculator — Free Online | Tabutility">
+  <meta property="og:description" content="Find your fertile window and predicted ovulation date. Enter your last period date and cycle length.">
+  <meta property="og:image" content="https://tabutility.com/og-blog.png">
+  <meta property="og:site_name" content="Tabutility">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://tabutility.com/og-blog.png">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <meta name="theme-color" content="#0f172a">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Ovulation Calculator","url":"https://ovulation-calculator.tabutility.com/","description":"Find your fertile window and predicted ovulation date. Enter your last period date and cycle length.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Ovulation Calculator","item":"https://ovulation-calculator.tabutility.com/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When am I most fertile?","acceptedAnswer":{"@type":"Answer","text":"You are most fertile in the 5 days before ovulation and on the day of ovulation itself. Ovulation typically occurs 14 days before your next period."}},{"@type":"Question","name":"How long does ovulation last?","acceptedAnswer":{"@type":"Answer","text":"The egg survives for 12–24 hours after release. However, sperm can survive up to 5 days in the reproductive tract."}},{"@type":"Question","name":"Is this calculator accurate?","acceptedAnswer":{"@type":"Answer","text":"This calculator gives an estimate based on average cycle patterns. Cycles vary — for medical decisions, consult a healthcare professional."}}]}</script>
+  <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7039091592734005" crossorigin="anonymous"></script>
+</head>
+<body style="margin:0;font-family:'Segoe UI',Arial,sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh">
+<nav style="background:#1e293b;padding:11px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #334155"><a href="https://tabutility.com" style="color:#fff;font-weight:800;font-size:16px;text-decoration:none">⚡ Tabutility</a><a href="https://tabutility.com/blog/" style="color:#a5b4fc;font-size:13px;font-weight:700;text-decoration:none">📖 Blog</a></nav>
+<div style="max-width:640px;margin:12px auto;padding:0 8px"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<div id="app" style="max-width:640px;margin:8px auto;padding:0 8px 32px">
+  <h1 style="font-size:24px;font-weight:800;margin:0 0 4px">🌸 Ovulation Calculator</h1>
+  <p style="color:#94a3b8;font-size:14px;margin:0 0 20px">Find your fertile window and predicted ovulation date based on your menstrual cycle.</p>
+  <div style="background:#1e293b;border-radius:10px;padding:18px;border:1px solid #334155;margin-bottom:14px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div><label style="font-size:12px;color:#94a3b8;font-weight:600">First Day of Last Period</label><input id="lmp" type="date" onchange="calc()" style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:10px 12px;color:#f1f5f9;font-size:14px;margin-top:6px;outline:none"></div>
+      <div><label style="font-size:12px;color:#94a3b8;font-weight:600">Cycle Length (days)</label><input id="cycle" type="number" value="28" min="21" max="45" onchange="calc()" style="width:100%;box-sizing:border-box;background:#0f172a;border:1px solid #334155;border-radius:6px;padding:10px 12px;color:#f1f5f9;font-size:15px;margin-top:6px;outline:none"></div>
+    </div>
+  </div>
+  <div id="results" style="display:none">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">
+      <div style="background:#e11d4820;border:1px solid #e11d4840;border-radius:10px;padding:16px;text-align:center"><div style="font-size:11px;color:#fda4af;margin-bottom:4px">OVULATION DAY</div><div id="r-ovul" style="font-size:16px;font-weight:800;color:#fda4af"></div></div>
+      <div style="background:#16a34a20;border:1px solid #16a34a40;border-radius:10px;padding:16px;text-align:center"><div style="font-size:11px;color:#4ade80;margin-bottom:4px">NEXT PERIOD</div><div id="r-next" style="font-size:16px;font-weight:800;color:#4ade80"></div></div>
+    </div>
+    <div style="background:#4f46e520;border:1px solid #4f46e540;border-radius:10px;padding:16px;margin-bottom:14px;text-align:center">
+      <div style="font-size:12px;color:#a5b4fc;margin-bottom:4px">🌟 FERTILE WINDOW (most likely to conceive)</div>
+      <div id="r-fertile" style="font-size:16px;font-weight:800;color:#c4b5fd"></div>
+    </div>
+    <div style="background:#1e293b;border-radius:10px;padding:18px;border:1px solid #334155">
+      <div style="font-size:13px;font-weight:700;color:#a5b4fc;margin-bottom:12px">NEXT 3 MONTHS</div>
+      <div id="r-months"></div>
+    </div>
+    <p style="font-size:12px;color:#475569;margin-top:12px;text-align:center">This calculator is for informational purposes only. Consult a healthcare professional for medical advice.</p>
+  </div>
+  <div id="prompt" style="color:#64748b;font-size:14px;text-align:center;padding:20px">Enter your last period date above</div>
+</div>
+<script>
+function addDays(d,n){const r=new Date(d);r.setDate(r.getDate()+n);return r;}
+function fmtD(d){return d.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}
+function calc(){
+  const lmp=new Date(document.getElementById('lmp').value);
+  const cycle=parseInt(document.getElementById('cycle').value)||28;
+  if(isNaN(lmp.getTime())){document.getElementById('results').style.display='none';document.getElementById('prompt').style.display='block';return;}
+  document.getElementById('results').style.display='block';
+  document.getElementById('prompt').style.display='none';
+  const ovul=addDays(lmp,cycle-14);
+  const fertStart=addDays(ovul,-5);
+  const nextPeriod=addDays(lmp,cycle);
+  document.getElementById('r-ovul').textContent=fmtD(ovul);
+  document.getElementById('r-next').textContent=fmtD(nextPeriod);
+  document.getElementById('r-fertile').textContent=fmtD(fertStart)+' — '+fmtD(ovul);
+  let html='';
+  for(let i=0;i<3;i++){
+    const periodStart=addDays(lmp,cycle*(i+1));
+    const ov=addDays(periodStart,cycle-14);
+    const fs=addDays(ov,-5);
+    html+='<div style="padding:10px 0;border-bottom:1px solid #334155;font-size:13px"><div style="color:#f1f5f9;font-weight:600">Cycle '+(i+2)+'</div><div style="color:#94a3b8;margin-top:2px">Period: '+fmtD(periodStart)+' · Ovulation: '+fmtD(ov)+' · Fertile: '+fmtD(fs)+'–'+fmtD(ov)+'</div></div>';
+  }
+  document.getElementById('r-months').innerHTML=html;
+}
+document.getElementById('lmp').value=new Date().toISOString().slice(0,10);
+calc();
+</script>
+<div style="max-width:640px;margin:12px auto;padding:0 8px"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://www.amazon.com/s?k=fertility+pregnancy+health+books&tag=tabutility-20','_blank','noopener noreferrer')" title="Planning for a family?">
+  <span style="font-size:28px;flex-shrink:0">📚</span>
+  <div style="min-width:0">
+    <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Planning for a family?</div>
+    <div style="font-size:12px;color:#94a3b8">Browse fertility & pregnancy books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
+    <div style="font-size:10px;color:#475569;margin-top:3px">As an Amazon Associate we earn from qualifying purchases.</div>
+  </div>
+</div>
+<h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;max-width:640px;margin-left:auto;margin-right:auto">Related Tools</h2>
+<div style="max-width:640px;margin:0 auto 32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+      <a href="https://period-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Period Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Wellness</div></a>
+      <a href="https://due-date-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Pregnancy Due Date Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Wellness</div></a>
+      <a href="https://bmi-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">BMI Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div></a>
+      <a href="https://water-intake-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Water Intake Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Wellness</div></a>
+    </div>
+</body>
+</html>
